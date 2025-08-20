@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+   "prestart": "npx prisma generate",
    "dev": "node server.js",
    "build": "npx prisma generate && npm install",
    "start": "npm run build && node server.js"
