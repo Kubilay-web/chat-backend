@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "node server.js",  
-    "build": "npx prisma generate",
-    "start": "npx prisma generate && node server.js"
+   "dev": "node server.js",
+   "build": "npx prisma generate && npm install",
+   "start": "npm run build && node server.js"
   },
   "keywords": [],
   "author": "",
