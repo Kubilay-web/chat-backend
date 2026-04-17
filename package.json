@@ -1,23 +1,27 @@
+
+
+
+
+
+
 {
   "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "prestart": "npx prisma generate",
-    "dev": "node server.js",
-    "build": "npm install",
-    "start": "npm run build && node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "prisma generate",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
-    "@prisma/client": "^6.19.3",
+    "@prisma/client": "6.19.3",
     "express": "^5.1.0",
-    "nodemon": "^2.0.22",
-    "prisma": "^6.19.3",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "prisma": "6.19.3",
+    "nodemon": "^2.0.22"
   }
 }
